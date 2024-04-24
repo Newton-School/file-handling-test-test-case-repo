@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FileReaderProjectTest {
+public class ApplicationIntegrationTest {
 
     @Test
     public void testReadFile() throws IOException {
@@ -17,7 +17,7 @@ public class FileReaderProjectTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-        FileReaderProject.readFromFile("dummy.txt");
+        Application.readFromFile("dummy.txt");
 
         // Expected content of dummy.txt
         String expectedContent = "Hello My name is Himanshu Dangwal";
@@ -32,7 +32,7 @@ public class FileReaderProjectTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-        FileReaderProject.readFromFile("dummy.txt");
+        Application.readFromFile("dummy.txt");
 
         // Expected first word of dummy.txt
         String expectedFirstWord = "Hello";
