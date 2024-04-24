@@ -3,7 +3,7 @@ name: default
 
 steps:
   - name: run-test-cases
-    image: maven:3.8.5-openjdk-17-slim
+    image: maven:3.8.5-openjdk-17
     when:
       status:
         - failure
@@ -14,7 +14,7 @@ steps:
       - cd ${PROJECT_FOLDER_NAME}
       - mvn clean test
   - name: result
-    image: maven:3.8.5-openjdk-17-slim
+    image: maven:3.8.5-openjdk-17
     when:
       status:
         - failure
