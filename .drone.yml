@@ -21,4 +21,4 @@ steps:
         - success
     commands:
       - cd ${PROJECT_FOLDER_NAME}/target/surefire-reports
-      - cat TEST-com.newtonschool.question.ApplicationIntegrationTest.xml
+      - echo "$(cat TEST-com.newtonschool.question.ApplicationIntegrationTest.xml)"
